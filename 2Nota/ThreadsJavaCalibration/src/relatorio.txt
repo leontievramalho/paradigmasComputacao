@@ -1,0 +1,24 @@
+    O uso de threads é um recurso importante para um bom desenvolvedor, pois permite dividir o código em diferentes
+linhas de execução, assim trechos distintos do código são executados simultaneamente ganhando velocidade de
+processamento. As threads, no entanto, consomem recursos para serem criadas e assim, caso sejam usadas indiscriminadamente
+podem gerar o efeito contrário, tornando o processamento mais lento, pois o custo para sua criação e execução acaba
+ultrapassando o tempo que seria poupado pelo seu uso.
+    Assim, é importante que o desenvolvedor saiba julgar adequadamente as ocasiões corretas para usar as threads. Se
+o programa é muito simples, com pouca entrada, provavelmente seja melhor nem usá-las. Mas para um sistema de grande
+porte com muitas entradas elas já passam a ser uma opção viável. E através de testes o programador pode verificar o número
+ideal de threads a serem usadas.
+    Outro a ponto a se considerar na hora de decidir usar ou não as threads é a necessidade de executar ações simultâneas,
+uma vez que esse é justamente a principal função da thread. Caso seu programa, por exemplo, precise fazer uma requisição
+ X e seja um processo que dure 2 minutos aproximadamente e depois um usuário precise preencher um formulário com vários
+ dados, é possível utilizar as threads para que enquanto 1 thread faz a requisição, o usuário consiga preencher
+ normalmento seus dados, sem ter que esperar a requisição finalizar. Isso melhora a performance e a experiência do
+ usuário, agregando valor ao programa.
+    No projeto atual foi feita a aplicação de threads num programa que lê 80mil linhas de um arquivo e decodifica a
+ String buscando o primeiro e último digito numérico dela e concatenando-os para formar um inteiro, em seguida soma
+ esses inteiros e retorna o resultado. Nos testes foi possível perceber que sem usar Threads o tempo médio para
+ a tarefa ser concluída é de 0,072 ms. Com 2 threads esse tempo cai drasticamente para 0,019 ms. Porém ao utilizar 4
+ threads o ganho foi mínimo, sendo executado em média a 0,068 ms e com 8 threads o tempo de execução ficou com média
+ de 0,085ms, pior do que sem o uso de threads.
+    Assim, percebe-se que o uso de threads deve ser feito de forma responsável e planejada, pensando nos motivos reais
+para usá-las, nos pós e contras. Além de ser necessário testes para verificar o número mais adequado de threads para
+cada situação.
