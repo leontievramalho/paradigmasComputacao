@@ -1,5 +1,3 @@
-
-
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -20,7 +18,7 @@ public class Main {
 
         System.out.printf("%.3f ms%n", timeSpent);
 
-        System.out.println("Com 8 threads");
+        System.out.println("\nCom 8 threads");
         tempoInicial = System.currentTimeMillis();
         ThreadsCalibracao thread1 = new ThreadsCalibracao(path,1,10000);
         ThreadsCalibracao thread2 = new ThreadsCalibracao(path,10001,20000);
@@ -65,7 +63,7 @@ public class Main {
                 )
         );
 
-        System.out.println("Total de linhas: "
+        /* System.out.println("Total de linhas: "
                 + (thread1.getCount()
                 + thread2.getCount()
                 + thread3.getCount()
@@ -75,12 +73,12 @@ public class Main {
                 + thread7.getCount()
                 + thread8.getCount()
                 )
-        );
+        ); */
         tempoFinal = System.currentTimeMillis();
         timeSpent = (tempoFinal - tempoInicial) / 1000d;
         System.out.printf("%.3f ms%n", timeSpent);
 
-        System.out.println("Com 2 threads");
+        System.out.println("\nCom 2 threads");
         tempoInicial = System.currentTimeMillis();
         thread1 = new ThreadsCalibracao(path,1,40000);
         thread2 = new ThreadsCalibracao(path,40001,80000);
@@ -101,11 +99,11 @@ public class Main {
                 )
         );
 
-        System.out.println("Total de linhas: "
+        /*System.out.println("Total de linhas: "
                         + (thread1.getCount()
                         + thread2.getCount()
                 )
-        );
+        ); */
         tempoFinal = System.currentTimeMillis();
         timeSpent = (tempoFinal - tempoInicial) / 1000d;
         System.out.printf("%.3f ms%n", timeSpent);

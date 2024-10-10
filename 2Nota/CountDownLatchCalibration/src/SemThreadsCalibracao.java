@@ -25,7 +25,7 @@ public class SemThreadsCalibracao {
         }
 
         System.out.println("A soma dos valores é: " + resultSum);
-        //System.out.println("Total de linhas: " + count);
+        System.out.println("Total de linhas: " + count);
 
 
     }
