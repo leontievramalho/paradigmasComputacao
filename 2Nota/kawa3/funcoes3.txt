@@ -1,0 +1,14 @@
+1) (define (numeros-para-letras numeros) (apply string (map (lambda (n) (string-ref "abcdefghijklmnopqrstuvwxyz" (- n 1))) numeros)))
+
+2) (define (numeros-para-notas numeros) (map (lambda (n) (list-ref '("Do" "Re" "Mi" "Fa" "Sol" "La" "Si") (- n 1))) numeros))
+
+Exemplos:
+#|kawa:1|# (define (numeros-para-letras numeros)(let ((alfabeto "abcdefghijklmnopqrstuvwxyz"))(apply string (map (lambda (n)(string-ref alfabeto (- n 1)))(1 = índice 0)numeros))))
+/dev/tty:1:98: call to unnamed procedure has too many arguments (2; must be 1)
+/dev/tty:1:149: warning - no declaration seen for ´┐¢ndice
+#|kawa:2|# (define (numeros-para-letras numeros) (apply string (map (lambda (n) (string-ref "abcdefghijklmnopqrstuvwxyz" (- n 1))) numeros)))
+#|kawa:3|# (display (numeros-para-letras '(1 2 3)))
+abc
+#|kawa:4|# (define (numeros-para-notas numeros) (map (lambda (n) (list-ref '("Do" "Re" "Mi" "Fa" "Sol" "La" "Si") (- n 1))) numeros))
+#|kawa:5|# (display (numeros-para-notas '(1 2 3)))
+(Do Re Mi)
